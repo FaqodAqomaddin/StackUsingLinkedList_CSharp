@@ -45,5 +45,20 @@ namespace StackUsingLinkedList_CSharp
             Console.WriteLine("\nThe pooped element is:" + top.info);
             top = top.next; //Make top point to the next node is squence
         }
+        public void display()
+        {
+            Node tmp;
+            if (empty()) //if stack is empty
+                Console.WriteLine("\nStack is empty");
+            else
+            {
+                //Travers the list form beggining till end
+                for (tmp = top; tmp != null; tmp = tmp.next)
+                {
+                    Console.WriteLine(tmp.info);
+                }
+                Console.WriteLine();
+            }
+        }
     }
 }
